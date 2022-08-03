@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+  gem "rails", "~> 7.0"
+  gem "redis", "~> 4.2.5"
+  gem "cable_ready", "~> 5.0.0.pre9"
+  gem "stimulus_reflex", "~> 3.5.0.pre9"
+  gem "puma", "~> 5.5.2"
+  gem "activerecord-nulldb-adapter"
+  gem "city-state"

@@ -1,0 +1,28 @@
+{
+  "name": "sr_mini",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "snowpack build",
+    "redis": "redis-server .redis.conf",
+    "install": "rm -rf tmp .local .bundle && bundle install --no-cache && rm -rf .bundle",
+    "start": "concurrently npm:redis \"npm:build && ruby application.rb $PORT\""
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "@rails/actioncable": "^6.1.4",
+    "@rails/activestorage": "^6.1.4",
+    "cable_ready": "^5.0.0-pre9",
+    "spark-md5": "^3.0.1",
+    "stimulus": "^2.0.0",
+    "stimulus_reflex": "^3.5.0-pre9",
+    "concurrently": "^6.2.0"
+  },
+  "devDependencies": {
+    "snowpack": "^3.0.13"
+  }
+}
